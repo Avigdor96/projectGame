@@ -1,30 +1,34 @@
-let users = JSON.parse(localStorage.getItem("users")) || {}
+// let users = JSON.parse(localStorage.getItem("users")) || {}
 const signUp = () => {
-    document.querySelector('signup-form').addEventListener('submit', function(event) {
-        event.preventDefault(); 
+    let users = JSON.parse(localStorage.getItem("users")) || {}
     let name = document.querySelector("#newUserName").value
     let phone = document.querySelector("#n_phone").value
     let email = document.querySelector("#n_email").value
     let pass = document.querySelector("#n_pass").value
-    let users = JSON.parse(localStorage.getItem("users")) || {}
-    if (users[name] === pass) {
+    
+    if (users[name]) {
         alert("משתשמש רשום")
+    }
+    else if(!name || !phone || !email || !pass){
+        alert("נא למלא את כל השדות")
     }
     else {
         let userData = {name, email, phone, pass}
-        localStorage.setItem("users", JSON.stringify(userData))
-        alert("נרשמת בהצלחה")
+        users[name] = userData
+        localStorage.setItem("users", JSON.stringify(users))
         document.querySelector("#signUpFrom").reset()
+        alert("נרשמת בהצלחה")
     }
 }
-    )}
 const logIn = () => {
-    document.querySelector('#logInForm').addEventListener('sumbit', function(event){
-        event.preventDefault
+    let users = JSON.parse(localStorage.getItem("users")) || {}
     let name = document.querySelector("#userName").value
     let pass = document.querySelector("#pass").value
-    let users = JSON.parse(localStorage.getItem("users")) || {}
-    if (users[name] === pass) {
+    if (users[name]
+        
+        
+        
+         && users[name].pass === pass) {
         alert("ברוך הבא")
         document.querySelector("#logInForm").reset()
     }
@@ -32,7 +36,6 @@ const logIn = () => {
         alert("משתמש לא נמצא נא בצע הרשמה");
         document.querySelector("#logInForm").reset()
     }
-})
 }
 const init = () => {
     document.querySelector("#btn_signUp").addEventListener("click", signUp)
