@@ -441,8 +441,14 @@ const init = () => {
 }
 
 const checkAnswer = (btnChoice, correctAnswer) => {
+    alert(currentUser)
+    let users = JSON.parse(localStorage.getItem("users")) || {}
     if (btnChoice.innerHTML === correctAnswer) {
         alert('תשובה נכונה')
+        let userData = users[currentUser]
+        userData.correctAnswer++
+        userData.score += 10
+        localStorage.setItem(currentUser, JSON.stringify(users))
         confetti({
             particleCount: 100,
             spread: 70,
