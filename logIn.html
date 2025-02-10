@@ -1,83 +1,45 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="he">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/logIn.css"> 
     <script defer src="js/logIn.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* height: 100vh; */
-            background-color: #f4f4f4;
-        }
-
-        .form-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: darkblue;
-        }
-    </style>
+    <script src="js/game.js"></script>
 </head>
 <header>
-
+    <img src="images/ttt.jpg" alt="Logo">
+    <h1>Trivia game</h1>
 </header>
-
 <body>
     <div class="container">
-         <h1 id="id_h1">ברוך הבא למשחק הטריוויה הטכנולוגי</h1>
+         <h1 id="id_h1">Welcome to tech trivia</h1>
         <div class="logIn">
             <br>
-            <h2>התחברות</h2>
+            <h2>Log In</h2>
             <form id="logInForm">
-                <input type="text" value="" id="userName" placeholder="שם משתשמש" required>
-                <input type="text" value="" id="pass" placeholder="סיסמא" required>
+                <input type="text" value="" id="userName" placeholder="User name" required>
+                <input type="text" value="" id="pass" placeholder="Password" required>
                 <button id="btn_signIn">כניסה</button>
             </form>
         </div>
         <div class="signUp" style="display: flex; flex-direction: column;">
-            <h2>אין לך חשבון?</h2>
-            <h2>הרשמה</h2>
+            <h2>You don't have an account yet?</h2>
+            <h2>Sign Up</h2>
             <form id="signUpFrom">
-                <input type="text" value="" id="newUserName" placeholder="שם משתמש" required>
-                <input type="email" value="" id="n_email" placeholder="אימייל" required>
-                <input type="text" value="" id="n_phone" placeholder="מספר טלפון" required>
-                <input type="text" value="" id="n_pass" placeholder="סיסמא" required>
-                <button id="btn_signUp">הרשמה</button>
+                <input type="text" value="" id="newUserName" placeholder="User Name" required>
+                <input type="email" value="" id="n_email" placeholder="Email" required>
+                <input type="text" value="" id="n_phone" placeholder="Phone Number" required>
+                <input type="text" value="" id="n_pass" placeholder="Password" required>
+                <button id="btn_signUp">Register and log in</button>
             </form>
         </div>
     </div>
 
 </body>
 <footer>
-    <h2 id="id_h2Foot"></h2>
+    <p>All rights reserved to Technology Trivia © 2025</p>
 </footer>
 
 </html>

@@ -1,4 +1,4 @@
-let screenedQuestions = []
+
 let questions = [
     {
         question: "איזו חברה ייצרה את מערכת ההפעלה Windows?",
@@ -392,6 +392,7 @@ let questions = [
         }
     
 ];
+let screenedQuestions = [];
 const randQuiz = () => {
     let quizDiv = document.querySelector('#quizDiv')
     quizDiv.innerHTML = ""
@@ -403,7 +404,7 @@ const randQuiz = () => {
             let answer3 = questions[randIndex].answers[2]
             let answer4 = questions[randIndex].answers[3]
             screenedQuestions.push(randIndex)
-            quizDiv.innerHTML += `<h2>${randQuiz}</h2>`
+            quizDiv.innerHTML += `<h2 class="quiz">${randQuiz}</h2>`
             quizDiv.innerHTML += `<br>`
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer1}</button>`
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer2}</button>`
@@ -425,40 +426,31 @@ const validRand = (index) => {
     return true
 }
 
-// const checkAnswer = (btnChoice, correctAnswer) => {
-//     if (btnChoice.innerHTML === correctAnswer) {
-//         alert('תשובה נכונה')
-//     }
-//     else {
-//         alert("תשובה שגויה")
-//     }
-//     randQuiz()
-// }
-const init = () => {
-    console.log(questions.length);
-    
-    randQuiz()
-}
-
 const checkAnswer = (btnChoice, correctAnswer) => {
-    alert(currentUser)
     let users = JSON.parse(localStorage.getItem("users")) || {}
+    let player = localStorage.getItem("currentUser")
     if (btnChoice.innerHTML === correctAnswer) {
-        alert('תשובה נכונה')
-        let userData = users[currentUser]
-        userData.correctAnswer++
-        userData.score += 10
-        localStorage.setItem(currentUser, JSON.stringify(users))
+        alert('תשובה נכונה')    
+        users[player].correct++
+        users[player].score += 10
+        localStorage.setItem("users", JSON.stringify(users))
         confetti({
             particleCount: 100,
             spread: 70,
             origin: { y: 0.6 }
         });
     } else {
+        users[player].unCorrect++
+        localStorage.setItem("users", JSON.stringify(users))
         alert("תשובה שגויה")
         btnChoice.classList.add('shake');
     }
     setTimeout(randQuiz, 1000); 
 }
 
-init()
+const initGame = () => {
+    randQuiz()
+}
+
+
+initGame()

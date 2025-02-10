@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); */
+    background: linear-gradient(135deg, #2f6dc4 10%, #640957 90%);
+    height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    width: 100%;
+    /* background-color: #333; */
+    background: linear-gradient(135deg, #100f10 10%,#814075 90%);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+}
+
+header {
+    top: 5px;
+    border-radius: 20px;
+}
+
+footer {
+    bottom: 5px;
+    border-radius: 20px;
+}
+
+header img {
+    height: 50px;
+    vertical-align: middle;
+}
+header h1 {
+    display: inline;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    /* width: 50%; */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    background: linear-gradient(135deg, #100f10 10%,#f591e3 90%);
+    color: rgb(253, 253, 253);
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #665c66 10%,#a33584 90%);
+    transform: scale(1.16);
+}
+.logIn{
+    width: 400px;
+    /* border: 3px solid blue; */
+    border-radius: 20px;
+}
+.signUp{
+    margin: 30px;
+    width: 400px;
+    /* border: 3px solid blue; */
+    border-radius: 20px;
+}
