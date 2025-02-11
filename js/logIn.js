@@ -1,6 +1,6 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || {}
+
 let users = JSON.parse(localStorage.getItem("users")) || {}
-const signUp = () => {
+const signUp = (event) => {
     let users = JSON.parse(localStorage.getItem("users")) || {}
     let name = document.querySelector("#newUserName").value
     let phone = document.querySelector("#n_phone").value
@@ -8,9 +8,11 @@ const signUp = () => {
     let pass = document.querySelector("#n_pass").value
     if (users[name]) {
         alert("משתשמש רשום")
+        event.preventDefault()
     }
     else if (!name || !phone || !email || !pass) {
         alert("נא למלא את כל השדות")
+        event.preventDefault()
     }
     else {
         let userData = { name, email, phone, pass, correct: 0, unCorrect: 0, score: 0 }
@@ -21,10 +23,9 @@ const signUp = () => {
         alert("נרשמת בהצלחה")
         currentUser["currentUser"] = name
         console.log(currentUser);
-        window.location.href = "game.html"
     }
 }
-const logIn = () => {
+const logIn = (event) => {
     // let users = JSON.parse(localStorage.getItem("users")) || {}
     let name = document.querySelector("#userName").value
     let pass = document.querySelector("#pass").value
@@ -33,21 +34,21 @@ const logIn = () => {
         currentUser["currentUser"] = name
         console.log(currentUser);
         document.querySelector("#logInForm").reset()
-        window.location.href = "game.html";
+        // window.location.href = "game.html";
     }
     else {
         alert("משתמש לא נמצא נא בצע הרשמה");
         document.querySelector("#logInForm").reset()
+        event.preventDefault()
     }
 }
 const initLogIn = () => {
     document.querySelector("#btn_signUp").addEventListener("click", signUp)
     document.querySelector("#btn_signIn").addEventListener("click", logIn)
+    
     // randQuiz()
-    initGame()
+    // initGame()
 }
-
-
-
+// let currentUser = JSON.parse(localStorage.getItem("currentUser")) || {}
 
 initLogIn()

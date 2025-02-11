@@ -171,3 +171,6 @@ header {
     margin: 0;
     font-size: 18px;
 }
+header button{
+    width: 100px;
+}

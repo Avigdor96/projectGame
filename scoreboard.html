@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard</title>
+    <link rel="stylesheet" href="css/scoreboard.css">
+    <script defer src="js/scoreboard.js"></script>
 </head>
 <body>
-    
+    <header>
+        <h1>לוח ניקוד</h1>
+    </header>
+    <div class="container">
+        <table id="scoreboard">
+            <thead>
+                <tr>
+                    <th>שחקן</th>
+                    <th>ניקוד</th>
+                    <th>תשובות נכונות</th>
+                    <th>תשובות שגויות</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- הנתונים יתווספו כאן באמצעות JavaScript -->
+            </tbody>
+        </table>
+        <button id="backToGameButton" onclick="location.href='game.html'">חזרה למשחק</button>
+    </div>
 </body>
 </html>

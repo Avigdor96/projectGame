@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>טריוויה</title>
-    
-    <link rel="stylesheet" href="css/game1.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script defer src="js/game.js"></script>
+    <link rel="stylesheet" href="css/game1.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
 </head>
 <body>
     <header>
         <div class="head">
-            <h2>ניקוד:</h2>
-            <h2>שחקן:</h2>
-            <h2>תשובות נכונות:</h2>
-            <h2>תשובות שגויות:</h2>
+            <h2>ניקוד: <span id="score">0</span></h2>
+            <h2>שחקן: <span id="playerName">שם השחקן</span></h2>
+            <h2>תשובות נכונות: <span id="correctAnswers">0</span></h2>
+            <h2>תשובות שגויות: <span id="wrongAnswers">0</span></h2>
+            <h2>זמן שנותר: <span id="timer">10</span> שניות</h2>
+            <button id="scoreboardButton" onclick="location.href='scoreboard.html'">לוח תוצאות</button>
         </div>
     </header>
     <div class="card">
@@ -23,5 +26,6 @@
     <div id="quizDiv">
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </body>
 </html>

@@ -393,8 +393,12 @@ let questions = [
     
 ];
 let screenedQuestions = [];
+let timerInterval;
+
+
 const randQuiz = () => {
-    let quizDiv = document.querySelector('#quizDiv')
+    let quizDiv = document.querySelector("#quizDiv")
+    console.log(quizDiv)
     quizDiv.innerHTML = ""
     let randIndex = indexLottery()
     if (validRand(randIndex) && questions[randIndex]) {
@@ -410,10 +414,46 @@ const randQuiz = () => {
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer2}</button>`
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer3}</button>`
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer4}</button>`
+            startTimer();
     }
     else {
         randQuiz()
     }
+}
+const startTimer = () => {
+    let timer = 10;
+    document.getElementById("timer").innerText = timer;
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        timer--;
+        document.getElementById("timer").innerText = timer;
+        if (timer <= 0) {
+            clearInterval(timerInterval);
+            handleTimeout();
+        }
+    }, 1000);
+};
+const handleTimeout = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'הזמן נגמר!',
+        text: 'תשובה שגויה.',
+        confirmButtonText: 'המשך'
+    }).then(() => {
+        let users = JSON.parse(localStorage.getItem("users")) || {};
+        let player = localStorage.getItem("currentUser");
+        if (!users[player]) {
+            users[player] = { correct: 0, unCorrect: 0, score: 0 };
+        }
+        users[player].unCorrect++;
+        localStorage.setItem("users", JSON.stringify(users));
+        updateHeader();
+        randQuiz();
+    });
+};
+const initGame = () => {
+    updateHeader();
+    randQuiz()
 }
 const indexLottery = () => {
     return Math.floor(Math.random() * (questions.length - 1))
@@ -425,32 +465,130 @@ const validRand = (index) => {
     }
     return true
 }
+const updateHeader = () => {
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+    let player = localStorage.getItem("currentUser");
 
+    if (users[player]) {
+        document.getElementById("score").innerText = users[player].score;
+        document.getElementById("correctAnswers").innerText = users[player].correct;
+        document.getElementById("wrongAnswers").innerText = users[player].unCorrect;
+        document.getElementById("playerName").innerText = player;
+    }
+}
 const checkAnswer = (btnChoice, correctAnswer) => {
-    let users = JSON.parse(localStorage.getItem("users")) || {}
-    let player = localStorage.getItem("currentUser")
+    clearInterval(timerInterval);
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+    let player = localStorage.getItem("currentUser");
+
     if (btnChoice.innerHTML === correctAnswer) {
-        alert('תשובה נכונה')    
-        users[player].correct++
-        users[player].score += 10
-        localStorage.setItem("users", JSON.stringify(users))
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
+        Swal.fire({
+            icon: 'success',
+            title: 'תשובה נכונה!',
+            showConfirmButton: false,
+            timer: 1500
+        }).then(() => {
+            if (!users[player]) {
+                users[player] = { correct: 0, unCorrect: 0, score: 0 };
+            }
+            
+            users[player].correct++;
+            users[player].score += 10;
+            localStorage.setItem("users", JSON.stringify(users));
+            
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+            setTimeout(randQuiz, 500); // מעבר לשאלה הבאה אחרי 2 שניות
         });
     } else {
-        users[player].unCorrect++
-        localStorage.setItem("users", JSON.stringify(users))
-        alert("תשובה שגויה")
-        btnChoice.classList.add('shake');
-    }
-    setTimeout(randQuiz, 1000); 
-}
+        Swal.fire({
+            icon: 'error',
+            title: 'תשובה שגויה!',
+            showConfirmButton: false,
+            timer: 1500
+        }).then(() => {
+            if (!users[player]) {
+                users[player] = { correct: 0, unCorrect: 0, score: 0 };
+            }
 
-const initGame = () => {
-    randQuiz()
-}
+            users[player].unCorrect++;
+            localStorage.setItem("users", JSON.stringify(users));
+            btnChoice.classList.add('shake');
+            setTimeout(randQuiz, 500); 
+            // setTimeout(() => {
+            //     btnChoice.classList.remove('shake');
+            // }, 500);
+            updateHeader(); // עדכון הנתונים ב-header
+        });
+    }
+};
+
+// const checkAnswer = (btnChoice, correctAnswer) => {
+//     let users = JSON.parse(localStorage.getItem("users")) || {};
+//     let player = localStorage.getItem("currentUser");
+
+//     if (btnChoice.innerHTML === correctAnswer) {
+//         alert('תשובה נכונה');
+        
+//         if (!users[player]) {
+//             users[player] = { correct: 0, unCorrect: 0, score: 0 };
+//         }
+        
+//         users[player].correct++;
+//         users[player].score += 10;
+//         localStorage.setItem("users", JSON.stringify(users));
+        
+//         confetti({
+//             particleCount: 100,
+//             spread: 70,
+//             origin: { y: 0.6 }
+//         });
+//         setTimeout(randQuiz, 2000); // מעבר לשאלה הבאה אחרי 2 שניות
+//     } else {
+//         if (!users[player]) {
+//             users[player] = { correct: 0, unCorrect: 0, score: 0 };
+//         }
+
+//         users[player].unCorrect++;
+//         localStorage.setItem("users", JSON.stringify(users));
+//         alert("תשובה שגויה");
+//         btnChoice.classList.add('shake');
+//         setTimeout(() => {
+//             btnChoice.classList.remove('shake');
+//         }, 500);
+//     }
+//     updateHeader(); // עדכון הנתונים ב-header
+// }
+
+// const checkAnswer = (btnChoice, correctAnswer) => {
+//     let users = JSON.parse(localStorage.getItem("users")) || {}
+//     let player = localStorage.getItem("currentUser")
+//     if (btnChoice.innerHTML === correctAnswer) {
+//         alert('תשובה נכונה')    
+//         users[player].correct++
+//         users[player].score += 10
+//         localStorage.setItem("users", JSON.stringify(users))
+//         confetti({
+//             particleCount: 100,
+//             spread: 70,
+//             origin: { y: 0.6 }
+//         });
+//     } else {
+//         users[player].unCorrect++
+//         localStorage.setItem("users", JSON.stringify(users))
+//         alert("תשובה שגויה")
+//         btnChoice.classList.add('shake');
+//     }
+//     setTimeout(randQuiz, 1000); 
+// }
+
+
+
+
+
 
 
 initGame()
