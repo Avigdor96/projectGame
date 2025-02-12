@@ -1,13 +1,4 @@
-let current = {}
-
-let name1 = "u"
-
-console.log(typeof(current));
-
-
-current["name"] = name1
-
-console.log(current);
-
-console.log(typeof(current));
-
+setInterval(function(){
+    const now = new Date
+    console.log(now);
+}, 1000)

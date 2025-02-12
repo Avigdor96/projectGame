@@ -215,193 +215,195 @@ let questions = [
         answers: ["תפוח", "פינגווין", "רובוט", "חץ מעגלי"],
         correct: "פינגווין"
     },
-        {
-            question: "באיזו שנה יצא לאור הדפדפן Google Chrome?",
-            answers: ["2004", "2006", "2008", "2010"],
-            correct: "2008"
-        },
-        {
-            question: "איזה פרוטוקול משמש לאבטחת תעבורת אינטרנט?",
-            answers: ["HTTP", "FTP", "HTTPS", "TCP"],
-            correct: "HTTPS"
-        },
-        {
-            question: "מהו שמו של מייסד חברת Tesla?",
-            answers: ["ג'ף בזוס", "ביל גייטס", "אלון מאסק", "סטיב ג'ובס"],
-            correct: "אלון מאסק"
-        },
-        {
-            question: "איזו מערכת הפעלה קיימת גם במחשבים וגם בסמארטפונים?",
-            answers: ["Windows", "Linux", "MacOS", "Android"],
-            correct: "Linux"
-        },
-        {
-            question: "מהו מנוע החיפוש הפופולרי ביותר?",
-            answers: ["Bing", "Yahoo", "Google", "DuckDuckGo"],
-            correct: "Google"
-        },
-        {
-            question: "מהו היצרן המוביל בשוק המעבדים נכון ל-2024?",
-            answers: ["Intel", "AMD", "NVIDIA", "Apple"],
-            correct: "Intel"
-        },
-        {
-            question: "איזו חברת טכנולוגיה ייצרה את הדפדפן Safari?",
-            answers: ["Microsoft", "Google", "Apple", "Mozilla"],
-            correct: "Apple"
-        },
-        {
-            question: "איזו חברת טכנולוגיה פיתחה את מערכת ההפעלה Android?",
-            answers: ["Google", "Samsung", "Microsoft", "Nokia"],
-            correct: "Google"
-        },
-        {
-            question: "מהי חברת התוכנה הגדולה בעולם?",
-            answers: ["Apple", "Microsoft", "Google", "Amazon"],
-            correct: "Microsoft"
-        },
-        {
-            question: "איזו שפת תכנות נחשבת לקלה ללמידה עבור מתחילים?",
-            answers: ["C++", "Python", "Java", "Assembly"],
-            correct: "Python"
-        },
-        {
-            question: "מהי התוכנה הפופולרית ביותר לעריכת תמונות?",
-            answers: ["GIMP", "CorelDRAW", "Photoshop", "MS Paint"],
-            correct: "Photoshop"
-        },
-        {
-            question: "איזו מדינה אחראית ליצירת TikTok?",
-            answers: ["ארה\"ב", "סין", "דרום קוריאה", "רוסיה"],
-            correct: "סין"
-        },
-        {
-            question: "מהו השם של המטבע הדיגיטלי של פייסבוק?",
-            answers: ["Bitcoin", "Ethereum", "Libra", "Ripple"],
-            correct: "Libra"
-        },
-        {
-            question: "איזו מערכת קבצים פופולרית ב-Windows?",
-            answers: ["NTFS", "EXT4", "APFS", "HFS+"],
-            correct: "NTFS"
-        },
-        {
-            question: "איזה סוג של קובץ משמש להרחבת זיכרון וירטואלי ב-Windows?",
-            answers: [".dll", ".exe", ".sys", ".swap"],
-            correct: ".swap"
-        },
-        {
-            question: "מהי המהירות של חיבור USB 3.0?",
-            answers: ["5Gbps", "10Gbps", "480Mbps", "40Gbps"],
-            correct: "5Gbps"
-        },
-        {
-            question: "איזו טכנולוגיה משמשת למסכים גמישים?",
-            answers: ["LCD", "OLED", "CRT", "Plasma"],
-            correct: "OLED"
-        },
-        {
-            question: "מהי תצורת הצפנה מאובטחת יותר?",
-            answers: ["AES", "DES", "MD5", "SHA-1"],
-            correct: "AES"
-        },
-        {
-            question: "איזו חברת טכנולוגיה פיתחה את מעבדי ה-M1?",
-            answers: ["Intel", "AMD", "Apple", "Qualcomm"],
-            correct: "Apple"
-        },
-        {
-            question: "מהו השם של הרובוט האנושי שפותח על ידי Boston Dynamics?",
-            answers: ["Atlas", "Sophia", "ASIMO", "Pepper"],
-            correct: "Atlas"
-        },
-        {
-            question: "איזו חברת טכנולוגיה יצרה את השעון החכם הראשון?",
-            answers: ["Apple", "Samsung", "IBM", "Sony"],
-            correct: "IBM"
-        },
-        {
-            question: "מהי החברה שמייצרת את כרטיסי המסך GeForce?",
-            answers: ["AMD", "Intel", "NVIDIA", "Qualcomm"],
-            correct: "NVIDIA"
-        },
-        {
-            question: "מהו גודל הזיכרון המינימלי הנדרש ל-Windows 11?",
-            answers: ["2GB", "4GB", "8GB", "16GB"],
-            correct: "4GB"
-        },
-        {
-            question: "מהי חברת הטכנולוגיה שמאחורי המותג PlayStation?",
-            answers: ["Microsoft", "Nintendo", "Sony", "Sega"],
-            correct: "Sony"
-        },
-        {
-            question: "איזה מכשיר נחשב לקונסולת המשחקים הנמכרת ביותר בכל הזמנים?",
-            answers: ["PlayStation 2", "Nintendo Switch", "Xbox 360", "PlayStation 5"],
-            correct: "PlayStation 2"
-        },
-        {
-            question: "איזו מערכת הפעלה קיימת במכשירי Raspberry Pi?",
-            answers: ["Windows", "MacOS", "Raspberry Pi OS", "Android"],
-            correct: "Raspberry Pi OS"
-        },
-        {
-            question: "איזה פרוטוקול משמש לשליחת מיילים?",
-            answers: ["HTTP", "SMTP", "POP3", "IMAP"],
-            correct: "SMTP"
-        },
-        {
-            question: "מהו סוג החיבור הנפוץ ביותר למסכים?",
-            answers: ["VGA", "DVI", "HDMI", "DisplayPort"],
-            correct: "HDMI"
-        },
-        {
-            question: "מהו התקן האחסון המהיר ביותר כיום?",
-            answers: ["HDD", "SSD", "NVMe SSD", "USB Drive"],
-            correct: "NVMe SSD"
-        },
-        {
-            question: "איזו שפת תכנות משמשת לפיתוח אפליקציות אנדרואיד?",
-            answers: ["C#", "Swift", "Kotlin", "Go"],
-            correct: "Kotlin"
-        },
-        {
-            question: "איזה פלטפורמה משמשת לאירוח קוד פתוח?",
-            answers: ["Bitbucket", "GitHub", "GitLab", "SourceForge"],
-            correct: "GitHub"
-        },
-        {
-            question: "איזו חברת טכנולוגיה רכשה את WhatsApp?",
-            answers: ["Google", "Microsoft", "Facebook", "Amazon"],
-            correct: "Facebook"
-        },
-        {
-            question: "מהי מערכת ההפעלה של Xbox?",
-            answers: ["Windows", "Linux", "Xbox OS", "DirectX OS"],
-            correct: "Xbox OS"
-        },
-        {
-            question: "מהו הדפדפן הראשון שהציע גלישה פרטית?",
-            answers: ["Chrome", "Firefox", "Safari", "Internet Explorer"],
-            correct: "Safari"
-        },
-        {
-            question: "מהי חברת הטכנולוגיה שמאחורי פלטפורמת Azure?",
-            answers: ["Amazon", "Microsoft", "Google", "IBM"],
-            correct: "Microsoft"
-        }
-    
+    {
+        question: "באיזו שנה יצא לאור הדפדפן Google Chrome?",
+        answers: ["2004", "2006", "2008", "2010"],
+        correct: "2008"
+    },
+    {
+        question: "איזה פרוטוקול משמש לאבטחת תעבורת אינטרנט?",
+        answers: ["HTTP", "FTP", "HTTPS", "TCP"],
+        correct: "HTTPS"
+    },
+    {
+        question: "מהו שמו של מייסד חברת Tesla?",
+        answers: ["ג'ף בזוס", "ביל גייטס", "אלון מאסק", "סטיב ג'ובס"],
+        correct: "אלון מאסק"
+    },
+    {
+        question: "איזו מערכת הפעלה קיימת גם במחשבים וגם בסמארטפונים?",
+        answers: ["Windows", "Linux", "MacOS", "Android"],
+        correct: "Linux"
+    },
+    {
+        question: "מהו מנוע החיפוש הפופולרי ביותר?",
+        answers: ["Bing", "Yahoo", "Google", "DuckDuckGo"],
+        correct: "Google"
+    },
+    {
+        question: "מהו היצרן המוביל בשוק המעבדים נכון ל-2024?",
+        answers: ["Intel", "AMD", "NVIDIA", "Apple"],
+        correct: "Intel"
+    },
+    {
+        question: "איזו חברת טכנולוגיה ייצרה את הדפדפן Safari?",
+        answers: ["Microsoft", "Google", "Apple", "Mozilla"],
+        correct: "Apple"
+    },
+    {
+        question: "איזו חברת טכנולוגיה פיתחה את מערכת ההפעלה Android?",
+        answers: ["Google", "Samsung", "Microsoft", "Nokia"],
+        correct: "Google"
+    },
+    {
+        question: "מהי חברת התוכנה הגדולה בעולם?",
+        answers: ["Apple", "Microsoft", "Google", "Amazon"],
+        correct: "Microsoft"
+    },
+    {
+        question: "איזו שפת תכנות נחשבת לקלה ללמידה עבור מתחילים?",
+        answers: ["C++", "Python", "Java", "Assembly"],
+        correct: "Python"
+    },
+    {
+        question: "מהי התוכנה הפופולרית ביותר לעריכת תמונות?",
+        answers: ["GIMP", "CorelDRAW", "Photoshop", "MS Paint"],
+        correct: "Photoshop"
+    },
+    {
+        question: "איזו מדינה אחראית ליצירת TikTok?",
+        answers: ["ארה\"ב", "סין", "דרום קוריאה", "רוסיה"],
+        correct: "סין"
+    },
+    {
+        question: "מהו השם של המטבע הדיגיטלי של פייסבוק?",
+        answers: ["Bitcoin", "Ethereum", "Libra", "Ripple"],
+        correct: "Libra"
+    },
+    {
+        question: "איזו מערכת קבצים פופולרית ב-Windows?",
+        answers: ["NTFS", "EXT4", "APFS", "HFS+"],
+        correct: "NTFS"
+    },
+    {
+        question: "איזה סוג של קובץ משמש להרחבת זיכרון וירטואלי ב-Windows?",
+        answers: [".dll", ".exe", ".sys", ".swap"],
+        correct: ".swap"
+    },
+    {
+        question: "מהי המהירות של חיבור USB 3.0?",
+        answers: ["5Gbps", "10Gbps", "480Mbps", "40Gbps"],
+        correct: "5Gbps"
+    },
+    {
+        question: "איזו טכנולוגיה משמשת למסכים גמישים?",
+        answers: ["LCD", "OLED", "CRT", "Plasma"],
+        correct: "OLED"
+    },
+    {
+        question: "מהי תצורת הצפנה מאובטחת יותר?",
+        answers: ["AES", "DES", "MD5", "SHA-1"],
+        correct: "AES"
+    },
+    {
+        question: "איזו חברת טכנולוגיה פיתחה את מעבדי ה-M1?",
+        answers: ["Intel", "AMD", "Apple", "Qualcomm"],
+        correct: "Apple"
+    },
+    {
+        question: "מהו השם של הרובוט האנושי שפותח על ידי Boston Dynamics?",
+        answers: ["Atlas", "Sophia", "ASIMO", "Pepper"],
+        correct: "Atlas"
+    },
+    {
+        question: "איזו חברת טכנולוגיה יצרה את השעון החכם הראשון?",
+        answers: ["Apple", "Samsung", "IBM", "Sony"],
+        correct: "IBM"
+    },
+    {
+        question: "מהי החברה שמייצרת את כרטיסי המסך GeForce?",
+        answers: ["AMD", "Intel", "NVIDIA", "Qualcomm"],
+        correct: "NVIDIA"
+    },
+    {
+        question: "מהו גודל הזיכרון המינימלי הנדרש ל-Windows 11?",
+        answers: ["2GB", "4GB", "8GB", "16GB"],
+        correct: "4GB"
+    },
+    {
+        question: "מהי חברת הטכנולוגיה שמאחורי המותג PlayStation?",
+        answers: ["Microsoft", "Nintendo", "Sony", "Sega"],
+        correct: "Sony"
+    },
+    {
+        question: "איזה מכשיר נחשב לקונסולת המשחקים הנמכרת ביותר בכל הזמנים?",
+        answers: ["PlayStation 2", "Nintendo Switch", "Xbox 360", "PlayStation 5"],
+        correct: "PlayStation 2"
+    },
+    {
+        question: "איזו מערכת הפעלה קיימת במכשירי Raspberry Pi?",
+        answers: ["Windows", "MacOS", "Raspberry Pi OS", "Android"],
+        correct: "Raspberry Pi OS"
+    },
+    {
+        question: "איזה פרוטוקול משמש לשליחת מיילים?",
+        answers: ["HTTP", "SMTP", "POP3", "IMAP"],
+        correct: "SMTP"
+    },
+    {
+        question: "מהו סוג החיבור הנפוץ ביותר למסכים?",
+        answers: ["VGA", "DVI", "HDMI", "DisplayPort"],
+        correct: "HDMI"
+    },
+    {
+        question: "מהו התקן האחסון המהיר ביותר כיום?",
+        answers: ["HDD", "SSD", "NVMe SSD", "USB Drive"],
+        correct: "NVMe SSD"
+    },
+    {
+        question: "איזו שפת תכנות משמשת לפיתוח אפליקציות אנדרואיד?",
+        answers: ["C#", "Swift", "Kotlin", "Go"],
+        correct: "Kotlin"
+    },
+    {
+        question: "איזה פלטפורמה משמשת לאירוח קוד פתוח?",
+        answers: ["Bitbucket", "GitHub", "GitLab", "SourceForge"],
+        correct: "GitHub"
+    },
+    {
+        question: "איזו חברת טכנולוגיה רכשה את WhatsApp?",
+        answers: ["Google", "Microsoft", "Facebook", "Amazon"],
+        correct: "Facebook"
+    },
+    {
+        question: "מהי מערכת ההפעלה של Xbox?",
+        answers: ["Windows", "Linux", "Xbox OS", "DirectX OS"],
+        correct: "Xbox OS"
+    },
+    {
+        question: "מהו הדפדפן הראשון שהציע גלישה פרטית?",
+        answers: ["Chrome", "Firefox", "Safari", "Internet Explorer"],
+        correct: "Safari"
+    },
+    {
+        question: "מהי חברת הטכנולוגיה שמאחורי פלטפורמת Azure?",
+        answers: ["Amazon", "Microsoft", "Google", "IBM"],
+        correct: "Microsoft"
+    }
+
 ];
 let screenedQuestions = [];
 let timerInterval;
-
+let count = 0;
 
 const randQuiz = () => {
     let quizDiv = document.querySelector("#quizDiv")
     console.log(quizDiv)
     quizDiv.innerHTML = ""
     let randIndex = indexLottery()
-    if (validRand(randIndex) && questions[randIndex]) {
+    if (count <= 2) {
+        if (validRand(randIndex) && questions[randIndex]) {
+            count++
             let randQuiz = questions[randIndex].question
             let answer1 = questions[randIndex].answers[0]
             let answer2 = questions[randIndex].answers[1]
@@ -415,9 +417,13 @@ const randQuiz = () => {
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer3}</button>`
             quizDiv.innerHTML += `<button class="btnA" onclick="checkAnswer(this, '${questions[randIndex].correct}')">${answer4}</button>`
             startTimer();
+        }
+        else {
+            randQuiz()
+        }
     }
     else {
-        randQuiz()
+        quizDiv.innerHTML = `Game Over`
     }
 }
 const startTimer = () => {
@@ -491,11 +497,11 @@ const checkAnswer = (btnChoice, correctAnswer) => {
             if (!users[player]) {
                 users[player] = { correct: 0, unCorrect: 0, score: 0 };
             }
-            
+
             users[player].correct++;
             users[player].score += 10;
             localStorage.setItem("users", JSON.stringify(users));
-            
+
             confetti({
                 particleCount: 100,
                 spread: 70,
@@ -517,7 +523,7 @@ const checkAnswer = (btnChoice, correctAnswer) => {
             users[player].unCorrect++;
             localStorage.setItem("users", JSON.stringify(users));
             btnChoice.classList.add('shake');
-            setTimeout(randQuiz, 500); 
+            setTimeout(randQuiz, 500);
             // setTimeout(() => {
             //     btnChoice.classList.remove('shake');
             // }, 500);
@@ -532,15 +538,15 @@ const checkAnswer = (btnChoice, correctAnswer) => {
 
 //     if (btnChoice.innerHTML === correctAnswer) {
 //         alert('תשובה נכונה');
-        
+
 //         if (!users[player]) {
 //             users[player] = { correct: 0, unCorrect: 0, score: 0 };
 //         }
-        
+
 //         users[player].correct++;
 //         users[player].score += 10;
 //         localStorage.setItem("users", JSON.stringify(users));
-        
+
 //         confetti({
 //             particleCount: 100,
 //             spread: 70,
