@@ -1,3 +1,23 @@
+/* עיצוב כותרת עליונה */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* עיצוב גוף העמוד */
 body {
     font-family: 'Arial', sans-serif;
@@ -32,7 +52,6 @@ h1 {
     padding-top: 10px;
     margin-bottom: 30px;
     animation: float 2s ease-in-out infinite;
-    
 }
 
 
@@ -46,8 +65,6 @@ h1 {
 
 /* עיצוב כרטיס השאלה */
 .card {
-    /* background: white; */
-    /* background: (135deg, #2d6fa9 0%, #201783 100%); */
     background: linear-gradient(135deg, #701068 0%, #192263 100%);
     overflow: hidden;
     padding: 20px;
@@ -146,26 +163,7 @@ label:hover {
     color: white;
 }
 
-/* עיצוב כותרת עליונה */
-header {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    border-radius: 0 0 20px 20px;
-}
 
-.head {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .head h2 {
     margin: 0;

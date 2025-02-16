@@ -34,7 +34,7 @@ const logIn = (event) => {
         currentUser["currentUser"] = name
         console.log(currentUser);
         document.querySelector("#logInForm").reset()
-        // window.location.href = "game.html";
+        window.location.href = "game.html";
     }
     else {
         alert("משתמש לא נמצא נא בצע הרשמה");
